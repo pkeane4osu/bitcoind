@@ -7,8 +7,8 @@ Automate your [Bitcoin](http://bitcoin.org/) transactions with this Ruby interfa
 Before connecting, you will need to configure a username and password for `bitcoind`, and start
 `bitcoind`. Once that's done:
 
-    client = Bitcoind.new 'username', 'password'
-      # => #<Bitcoind::Client "http://username:password@localhost:8332" >
+    client = Bitcoind.new 'pkeane4osu', 'Littlemax44'
+      # => #<Bitcoind::Client "http://pkeane4osu:Littlemax44@localhost:8332" >
 
 ## Account Balances
 
@@ -20,7 +20,7 @@ You can get the balance of all addresses controlled by the client:
 You can also get a hash of all accounts the client controls:
 
     client.accounts
-      # => {"Your Address"=>#<Bitcoind::Account "Your Address" >, "eve-online ransoms"=>#<Bitcoind::Account "eve-online ransoms" >}
+      # => {"14DKRyVa9R1gGtWgiALV4jGrMUVfNm7cfW"=>#<Bitcoind::Account "14DKRyVa9R1gGtWgiALV4jGrMUVfNm7cfW" >, "eve-online ransoms"=>#<Bitcoind::Account "eve-online ransoms" >}
 
 And of course each account has its own balance too:
 
@@ -38,7 +38,7 @@ You can get all the transactions in an account:
 
 You can send money from an account too:
 
-    ransom.send_to 'destinationaddress', 2
+    ransom.send_to '14DKRyVa9R1gGtWgiALV4jGrMUVfNm7cfW', 2
       # => #<Bitcoind::Account deadbeef888abadbeef UNCONFIRMED>
 
 ## Making Accounts
@@ -48,7 +48,7 @@ Creating an account with an associated address is done through the accounts inte
     tiny_wings = client.accounts.new 'tiny wings ransoms'
       # => #<Bitcoind::Account "tiny wings ransoms" >
     tiny_wings.address
-      # => "1KV5khnHbbHF2nNQkk7Pe5nPndEj43U27r"
+      # => "14DKRyVa9R1gGtWgiALV4jGrMUVfNm7cfW"
 
 # Contributing
 
