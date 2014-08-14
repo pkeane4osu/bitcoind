@@ -7,7 +7,7 @@ Automate your [Bitcoin](http://bitcoin.org/) transactions with this Ruby interfa
 Before connecting, you will need to configure a username and password for `bitcoind`, and start
 `bitcoind`. Once that's done:
 
-    client = Bitcoind.new 'pkeane4osu', 'Littlemax44'
+    client = Bitcoind.new 'username', 'password'
       # => #<Bitcoind::Client "http://pkeane4osu:Littlemax44@localhost:8332" >
 
 ## Account Balances
